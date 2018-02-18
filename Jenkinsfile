@@ -12,7 +12,7 @@ pipeline {
       }
       stage('Build') {
           steps {
-	     sh 'mvn -f mavenproject1/pom.xml clean compile
+	     sh 'mvn -f mavenproject1/pom.xml clean compile'
 	  }
       }
 
