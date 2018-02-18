@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  tools {
+     maven 'M3'
+  }
   stages {
       stage('checkout') {
           steps {
@@ -7,5 +10,11 @@ pipeline {
 	  }
 
       }
+      stage('Build') {
+          steps {
+	     sh 'mvn -f mavenproject1/pom.xml clean compile
+	  }
+      }
+
   }
 }
