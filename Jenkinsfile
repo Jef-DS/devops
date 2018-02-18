@@ -1,10 +1,11 @@
 pipeline {
   agent any
   stages {
-      stage('Hello from github') {
+      stage('checkout') {
           steps {
-	      echo "Hello World"
+	      git 'https://github.com/Jef-DS/devops.git'
 	  }
+
       }
   }
 }
